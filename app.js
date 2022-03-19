@@ -32,9 +32,13 @@ app.get("/calculator", function(req, res) {
     var n1 = parseInt(req.query.n1)
     var n2 = parseInt(req.query.n2)
     var sum = n1 + n2
+    console.log("n1 is: " + n1)
+    console.log("n2 is: " + n2)
     console.log("Total number is: " + sum)
     res.end()
 })
+
+//URL = http://127.0.0.1:3000/calculator?n1=4&n2=6
 
 app.post('/calculator', function(req, res) {
     var n3 = parseInt(req.body.n1)
